@@ -24,7 +24,7 @@ const menu = computed(() => {
     <UHeader>
       <template #left>
         <NuxtLink to="/">
-          <AppLogo class="w-auto h-6 shrink-0" /> Starter template
+          <AppLogo class="w-auto h-6 shrink-0" /> Starter
         </NuxtLink>
       </template>
       <UNavigationMenu :items="menu" />

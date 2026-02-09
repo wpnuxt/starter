@@ -28,7 +28,7 @@ export default defineNuxtConfig({
   },
 
   wpNuxt: {
-    wordpressUrl: process.env.WP_URL,
+    wordpressUrl: process.env.WPNUXT_WORDPRESS_URL,
     imageRelativePaths: true
   }
 })

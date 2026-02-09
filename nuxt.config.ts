@@ -12,10 +12,6 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  routeRules: {
-    '/': { isr: true }
-  },
-
   compatibilityDate: '2026-02-09',
 
   eslint: {

@@ -25,4 +25,4 @@ logs
 
 # WPNuxt generated files
 .queries/
-.schema.graphql
+schema.graphql

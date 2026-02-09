@@ -2,6 +2,9 @@ name: ci
 
 on: push
 
+env:
+  WPNUXT_WORDPRESS_URL: ${{ secrets.WPNUXT_WORDPRESS_URL }}
+
 jobs:
   ci:
     runs-on: ${{ matrix.os }}

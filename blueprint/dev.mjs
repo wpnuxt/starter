@@ -52,6 +52,8 @@ process.on('SIGTERM', () => {
 
 await waitForGraphQL()
 
+process.env.WPNUXT_WORDPRESS_URL = 'http://127.0.0.1:9400'
+
 const nuxt = startProcess('npx', ['nuxt', 'dev'])
 
 nuxt.on('close', (code) => {

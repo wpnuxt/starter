@@ -29,7 +29,7 @@ async function waitForGraphQL() {
           return
         }
       }
-    } catch {}
+    } catch { /* expected while waiting for server */ }
     await new Promise(resolve => setTimeout(resolve, POLL_INTERVAL))
   }
 }

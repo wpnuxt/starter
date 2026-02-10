@@ -5,17 +5,10 @@ const { data } = await useMenu({ name: 'main' })
 const runtimeConfig = useRuntimeConfig()
 
 const menu = computed(() => {
-  const wordPressPages = data.value?.map((item: MenuItemFragment) => ({
+  return data.value?.map((item: MenuItemFragment) => ({
     label: item.label,
     to: item.uri
-  })) ?? []
-  return [
-    {
-      label: 'Home',
-      to: '/'
-    },
-    ...wordPressPages
-  ]
+  }))
 })
 </script>
 
@@ -37,7 +30,7 @@ const menu = computed(() => {
           :to="`${runtimeConfig.public.wordpressUrl}/wp-admin`"
         />
         <UButton
-          to="https://github.com/wpnuxt/wpnuxt-starter"
+          to="https://github.com/wpnuxt/starter"
           target="_blank"
           icon="i-simple-icons-github"
           aria-label="GitHub"

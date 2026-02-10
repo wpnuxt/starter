@@ -6,6 +6,7 @@ Use this template to get started with [WPNuxt](https://wpnuxt.com) and [Nuxt UI]
 
 - [Live demo](https://starter-template.wpnuxt.com/)
 - [Documentation](https://wpnuxt.com/getting-started/installation)
+- [Launch WordPress Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wpnuxt/starter/main/blueprint.json) - spin up a WPGraphQL-ready WordPress instance in your browser
 
 ## Quick Start
 

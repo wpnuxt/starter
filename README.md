@@ -28,11 +28,17 @@ pnpm install
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`:
+To start the development server on `http://localhost:3000` you have two options:
 
-```bash
-pnpm dev
-```
+- if you already have a WordPress site running and installed the WPGraphQL plugin, run:
+    ```bash
+    pnpm dev
+    ```
+
+- if you want to use the blueprint server to spin up a WordPress site in your browser, run:
+    ```bash
+    pnpm dev:blueprint
+    ```
 
 ## Production
 

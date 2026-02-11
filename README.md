@@ -11,7 +11,7 @@ Use this template to get started with [WPNuxt](https://wpnuxt.com) and [Nuxt UI]
 ## Quick Start
 
 ```bash [Terminal]
-npm create wpnuxt@latest
+npm create wpnuxt@latest -- -t full
 ```
 
 ## Deploy your own

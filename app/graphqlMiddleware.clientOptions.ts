@@ -1,5 +1,6 @@
 import { defineGraphqlClientOptions } from '@wpnuxt/core/client-options'
 
+// @ts-ignore - must use #imports (not vue-router) to avoid inject() errors outside setup context
 import { useRoute } from '#imports'
 
 /**

@@ -17,7 +17,7 @@
     "@iconify-json/simple-icons": "^1.2.70",
     "@nuxt/ui": "^4.4.0",
     "@tailwindcss/typography": "^0.5.19",
-    "@wpnuxt/core": "2.0.0-alpha.15",
+    "@wpnuxt/core": "2.0.0-alpha.16",
     "nuxt": "^4.3.1",
     "tailwindcss": "^4.1.18"
   },

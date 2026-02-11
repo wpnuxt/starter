@@ -17,12 +17,17 @@ export default defineGraphqlClientOptions<{
   previewToken?: string
 }>({
   buildClientContext() {
-    const route = useRoute()
+    try {
+      const route = useRoute()
 
-    return {
-      // Context values must be strings - use 'true'/'false' instead of boolean
-      preview: route.query.preview === 'true' ? 'true' : undefined,
-      previewToken: route.query.token as string | undefined
+      return {
+        // Context values must be strings - use 'true'/'false' instead of boolean
+        preview: route.query.preview === 'true' ? 'true' : undefined,
+        previewToken: route.query.token as string | undefined
+      }
+    } catch {
+      // useRoute() uses inject() which fails during SSR outside component context
+      return {}
     }
   }
 })

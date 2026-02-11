@@ -1,1 +1,3 @@
-setups.@wpnuxt/core="2.0.0-alpha.16"
+setups.@wpnuxt/auth="2.0.0-beta.2"
+setups.@wpnuxt/blocks="2.0.0-beta.2"
+setups.@wpnuxt/core="2.0.0-beta.2"

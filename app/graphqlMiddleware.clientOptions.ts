@@ -1,5 +1,6 @@
 import { defineGraphqlClientOptions } from '@wpnuxt/core/client-options'
-import { useRoute } from 'vue-router'
+
+import { useRoute } from '#imports'
 
 /**
  * WPNuxt default client options for nuxt-graphql-middleware.

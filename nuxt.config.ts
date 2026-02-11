@@ -3,7 +3,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@nuxt/ui',
-    '@wpnuxt/core'
+    '@wpnuxt/core',
+    '@wpnuxt/auth',
+    '@wpnuxt/blocks'
   ],
 
   devtools: {
@@ -12,7 +14,7 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  compatibilityDate: '2026-02-09',
+  compatibilityDate: '2026-02-11',
 
   eslint: {
     config: {
@@ -23,8 +25,31 @@ export default defineNuxtConfig({
     }
   },
 
+  graphqlMiddleware: {
+    errorOverlay: false
+  },
+
+  image: {
+    alias: {
+      '/wp-content': `${process.env.WPNUXT_WORDPRESS_URL}/wp-content`
+    }
+  },
+
   wpNuxt: {
     wordpressUrl: process.env.WPNUXT_WORDPRESS_URL,
     imageRelativePaths: true
+  },
+
+  wpNuxtAuth: {
+    providers: {
+      password: { enabled: true },
+      headlessLogin: {
+        enabled: true
+      }
+    }
+  },
+
+  wpNuxtBlocks: {
+    imageDomains: [new URL(process.env.WPNUXT_WORDPRESS_URL || 'http://localhost').hostname]
   }
 })

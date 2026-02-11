@@ -3,6 +3,7 @@ import type { MenuItemFragment } from '#graphql-operations'
 
 const { data } = await useMenu({ name: 'main' })
 const runtimeConfig = useRuntimeConfig()
+const { isAuthenticated, user, logout } = useWPAuth()
 
 const menu = computed(() => {
   return data.value?.map((item: MenuItemFragment) => ({
@@ -26,6 +27,7 @@ const menu = computed(() => {
         <UButton
           v-if="runtimeConfig.public.wordpressUrl"
           icon="i-simple-icons-wordpress"
+          color="neutral"
           variant="ghost"
           :to="`${runtimeConfig.public.wordpressUrl}/wp-admin`"
         />
@@ -37,6 +39,28 @@ const menu = computed(() => {
           color="neutral"
           variant="ghost"
         />
+
+        <template v-if="isAuthenticated">
+          <UUser
+            to="/profile"
+            :name="user?.name || user?.username"
+            :avatar="{ src: user?.avatar?.url, icon: 'i-lucide-user' }"
+            size="sm"
+          />
+          <UButton
+            variant="ghost"
+            color="error"
+            icon="i-lucide-log-out"
+            @click="logout"
+          />
+        </template>
+        <UButton
+          v-else
+          to="/login"
+          variant="soft"
+        >
+          Sign in
+        </UButton>
       </template>
     </UHeader>
     <UMain>

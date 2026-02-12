@@ -35,7 +35,7 @@ async function waitForGraphQL() {
 }
 
 const wp = startProcess('npx', [
-  '@wp-playground/cli@latest', 'server',
+  '@wp-playground/cli@3.0.46', 'server',
   '--blueprint=./blueprint.json',
   '--mount=./blueprint/images:/wordpress/wp-content/uploads/blueprint'
 ])

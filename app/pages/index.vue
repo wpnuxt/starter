@@ -1,5 +1,11 @@
 <script setup lang="ts">
-const { data: posts } = await usePosts()
+const orderField = ref('DATE')
+const order = ref<'ASC' | 'DESC'>('DESC')
+
+const { data: posts } = await usePosts(() => ({
+  orderField: orderField.value,
+  order: order.value
+}))
 </script>
 
 <template>
@@ -10,6 +16,7 @@ const { data: posts } = await usePosts()
         description="Read our latest blog posts"
       />
       <UPageBody>
+        <OrderOptions v-model:order-field="orderField" v-model:order="order" />
         <UBlogPosts>
           <UBlogPost
             v-for="post in posts"

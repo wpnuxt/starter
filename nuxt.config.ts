@@ -37,7 +37,14 @@ export default defineNuxtConfig({
 
   wpNuxt: {
     wordpressUrl: process.env.WPNUXT_WORDPRESS_URL,
-    imageRelativePaths: true
+    imageRelativePaths: true,
+    // Auto-generate fragments + queries for every Custom Post Type in your
+    // WordPress schema. Drop a file with the same name in `extend/queries/`
+    // (or `extend/queries/fragments/`) to replace the generated one.
+    // See https://wpnuxt.com/guide/custom-post-types
+    cpt: {
+      enabled: true
+    }
   },
 
   wpNuxtAuth: {

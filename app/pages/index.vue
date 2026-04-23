@@ -16,7 +16,10 @@ const { data: posts } = await usePosts(() => ({
         description="Read our latest blog posts"
       />
       <UPageBody>
-        <OrderOptions v-model:order-field="orderField" v-model:order="order" />
+        <OrderOptions
+          v-model:order-field="orderField"
+          v-model:order="order"
+        />
         <UBlogPosts>
           <UBlogPost
             v-for="post in posts"

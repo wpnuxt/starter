@@ -17,10 +17,10 @@
     "@iconify-json/simple-icons": "^1.2.85",
     "@nuxt/ui": "^4.8.1",
     "@tailwindcss/typography": "^0.5.19",
-    "@wpnuxt/auth": "2.3.2",
-    "@wpnuxt/blocks": "2.3.2",
-    "@wpnuxt/core": "2.3.2",
-    "nuxt": "^4.4.6",
+    "@wpnuxt/auth": "2.3.3",
+    "@wpnuxt/blocks": "2.3.3",
+    "@wpnuxt/core": "2.3.3",
+    "nuxt": "^4.4.7",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {

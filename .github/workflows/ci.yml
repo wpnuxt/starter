@@ -3,7 +3,7 @@ name: ci
 on: push
 
 env:
-  WPNUXT_WORDPRESS_URL: ${{ secrets.WPNUXT_WORDPRESS_URL }}
+  WPNUXT_WORDPRESS_URL: ${{ vars.WPNUXT_WORDPRESS_URL }}
 
 jobs:
   ci:

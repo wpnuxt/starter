@@ -5,15 +5,28 @@ const { data: post } = await useNodeByUri(
   { uri: route.path },
   { watch: [() => route.path] }
 )
+
+const header = computed(() => {
+  const node = post.value
+  if (!node) return { title: '', date: '', image: '' }
+  if ('contentTypeName' in node) {
+    return {
+      title: node.title ?? '',
+      date: node.date ?? '',
+      image: node.featuredImage?.node?.relativePath ?? ''
+    }
+  }
+  return { title: node.name ?? '', date: '', image: '' }
+})
 </script>
 
 <template>
   <UContainer>
     <UPage>
       <UPageHeader
-        :title="post?.title ?? ''"
-        :date="post?.date ?? ''"
-        :image="post?.featuredImage?.node?.relativePath ?? ''"
+        :title="header.title"
+        :date="header.date"
+        :image="header.image"
       />
       <UPageBody>
         <UPageCard>
